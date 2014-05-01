@@ -4,22 +4,12 @@
     <title></title>
     <%= csrf_meta_tags %>
     <!--[if lt IE 9]>
+	<%= stylesheet_link_tag "screen", media: "all", "data-turbolinks-track" => true %>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <nav>
-            <ul class="nav pull-right">
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-    <div class="container">
+  <body class='<%= controller.controller_name %>'>
+    
       <%= yield %>
-    </div>
   </body>
 </html>
