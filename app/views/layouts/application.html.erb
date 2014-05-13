@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html style="height:100%;">
   <head>
     <title></title>
-    <%= csrf_meta_tags %>
-    <!--[if lt IE 9]>
-	<%= stylesheet_link_tag "screen", media: "all", "data-turbolinks-track" => true %>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
   </head>
-  <body class='<%= controller.controller_name %>'>
-    
+  <body class='<%= controller.controller_name %>' style="height:100%;">
+    <header style="border-bottom:thick solid black;" >
+        <h1 style="font-size:60px;display:inline;padding-right:20px;">PracticePad</h1>
+        <div class="login-out" style="display:inline; padding-right:20px;"><a href="">sign in</a> | <a href="">register</a></div>
+        <img src="" alt="TboneLogo">
+    </header>
+    <div class="nav" style="float:left;padding-right:70px;border-right:thick solid black;height:100%;margin-right:50px;">
+        <ul style="list-style-type:none;">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">My Log</a></li>
+        </ul>
+    </div>
       <%= yield %>
   </body>
 </html>
